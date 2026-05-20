@@ -3,13 +3,41 @@ body{
   color:white;
   text-align:center;
   font-family:Arial;
-  padding-top:100px;
+  padding:30px;
 }
 
 button{
-  padding:10px 20px;
-  font-size:18px;
+  margin:10px;
+  padding:10px 15px;
   border:none;
   border-radius:8px;
   cursor:pointer;
+  background:#38bdf8;
+  color:black;
+  font-weight:bold;
+}
+
+#factBox{
+  color:cyan;
+  margin-top:20px;
+}
+
+#quizResult{
+  color:lightgreen;
+  margin-top:15px;
+}
+
+ul{
+  list-style:none;
+  padding:0;
+}
+
+li{
+  margin:5px 0;
+  color:#38bdf8;
+}
+
+hr{
+  margin:40px 0;
+  border:1px solid #334155;
 }
