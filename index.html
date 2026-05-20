@@ -4,15 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chemistry Club</title>
+  <title>Chemistry Learning Hub</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header class="hero">
-  <h1>🧪 Chemistry Club</h1>
-  <p>Learn chemistry through experiments, quizzes, and interactive challenges</p>
+  <h1>🧪 Chemistry Learning Hub</h1>
+  <p>Interactive learning with quizzes, AI bot, diagrams & activities</p>
 </header>
 
 <main>
@@ -20,7 +20,7 @@
   <!-- FACTS -->
   <section class="card">
     <h2>🔬 Chemistry Facts</h2>
-    <p id="factBox">Loading fact...</p>
+    <p id="factBox">Loading facts...</p>
   </section>
 
   <!-- QUIZ -->
@@ -29,7 +29,7 @@
 
     <p id="question">Loading question...</p>
 
-    <div class="button-row">
+    <div class="button-grid">
       <button onclick="checkAnswer(0)">A</button>
       <button onclick="checkAnswer(1)">B</button>
       <button onclick="checkAnswer(2)">C</button>
@@ -45,23 +45,61 @@
 
     <div class="grid">
       <div class="box">🧪 Virtual Experiments</div>
-      <div class="box">📊 Reaction Balancing</div>
+      <div class="box">⚖️ Reaction Balancing</div>
       <div class="box">🧠 Chemistry Puzzles</div>
       <div class="box">🌡️ pH Challenges</div>
-      <div class="box">🔬 Molecule Building</div>
+      <div class="box">🔬 Molecule Builder</div>
       <div class="box">📚 Study Notes</div>
     </div>
   </section>
 
-  <!-- CREDITS -->
+  <!-- DIAGRAMS -->
   <section class="card">
-    <h2>⭐ Credits</h2>
+    <h2>📊 Diagrams</h2>
 
-    <p>This Chemistry Club website was created for learning and collaboration.</p>
+    <div class="grid">
+      <div class="diagram">
+        <h3>Atom</h3>
+        <p>Nucleus + electrons orbiting</p>
+      </div>
 
-    <ul>
-      <li>👨‍💻 Developer: Aarush Balamurugan</li>
-    </ul>
+      <div class="diagram">
+        <h3>Water (H₂O)</h3>
+        <p>Bent molecular shape</p>
+      </div>
+
+      <div class="diagram">
+        <h3>pH Scale</h3>
+        <p>0 acid → 7 neutral → 14 base</p>
+      </div>
+
+      <div class="diagram">
+        <h3>Periodic Table</h3>
+        <p>118 elements arranged by number</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI CHATBOT -->
+  <section class="card">
+    <h2>🤖 Chemistry AI Bot</h2>
+
+    <input id="userInput" placeholder="Ask a chemistry question..." />
+    <button onclick="askBot()">Ask</button>
+
+    <p id="botReply"></p>
+  </section>
+
+  <!-- CREDITS -->
+  <section class="card developer-card">
+
+    <h2>👨‍💻 Developer</h2>
+
+    <div class="developer-name">
+      ⭐ Aarush Balamurugan ⭐
+    </div>
+
+    <p class="highlight">Lead Developer of Chemistry Learning Hub</p>
 
     <h3>🤝 Helpers</h3>
 
@@ -74,6 +112,7 @@
     </ul>
 
     <p>🌐 Hosted on GitHub Pages</p>
+
   </section>
 
 </main>
