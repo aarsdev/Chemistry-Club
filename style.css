@@ -23,6 +23,7 @@ body {
 
 .hero p {
   color: #cbd5e1;
+  margin-top: 10px;
 }
 
 /* CARD */
@@ -69,9 +70,10 @@ button:hover {
 
 /* INPUT */
 input {
-  padding: 10px;
+  padding: 12px;
   width: 60%;
-  border-radius: 8px;
+  max-width: 400px;
+  border-radius: 10px;
   border: none;
 }
 
@@ -82,8 +84,8 @@ input {
 }
 
 #quizResult {
-  color: #4ade80;
   margin-top: 10px;
+  color: #4ade80;
 }
 
 /* DEVELOPER */
@@ -102,7 +104,6 @@ input {
   color: #fbbf24;
 }
 
-/* LIST */
 ul {
   list-style: none;
 }
@@ -110,4 +111,10 @@ ul {
 li {
   padding: 4px;
   color: #cbd5e1;
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  color: #94a3b8;
 }
