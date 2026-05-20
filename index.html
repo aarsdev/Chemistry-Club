@@ -12,7 +12,7 @@
 
 <header class="hero">
   <h1>🧪 Chemistry Learning Hub</h1>
-  <p>Interactive learning with quizzes, AI bot, diagrams & activities</p>
+  <p>Interactive learning with quizzes, facts, diagrams & AI assistant</p>
 </header>
 
 <main>
@@ -29,11 +29,11 @@
 
     <p id="question">Loading question...</p>
 
-    <div class="button-grid">
-      <button onclick="checkAnswer(0)">A</button>
-      <button onclick="checkAnswer(1)">B</button>
-      <button onclick="checkAnswer(2)">C</button>
-      <button onclick="checkAnswer(3)">D</button>
+    <div id="options" class="button-grid">
+      <button onclick="checkAnswer(0)">Option</button>
+      <button onclick="checkAnswer(1)">Option</button>
+      <button onclick="checkAnswer(2)">Option</button>
+      <button onclick="checkAnswer(3)">Option</button>
     </div>
 
     <p id="quizResult"></p>
@@ -60,12 +60,12 @@
     <div class="grid">
       <div class="diagram">
         <h3>Atom</h3>
-        <p>Nucleus + electrons orbiting</p>
+        <p>Nucleus + electrons</p>
       </div>
 
       <div class="diagram">
         <h3>Water (H₂O)</h3>
-        <p>Bent molecular shape</p>
+        <p>Bent molecular structure</p>
       </div>
 
       <div class="diagram">
@@ -75,14 +75,14 @@
 
       <div class="diagram">
         <h3>Periodic Table</h3>
-        <p>118 elements arranged by number</p>
+        <p>118 elements organized</p>
       </div>
     </div>
   </section>
 
-  <!-- AI CHATBOT -->
+  <!-- CHATBOT -->
   <section class="card">
-    <h2>🤖 Chemistry AI Bot</h2>
+    <h2>🤖 Chemistry AI Assistant</h2>
 
     <input id="userInput" placeholder="Ask a chemistry question..." />
     <button onclick="askBot()">Ask</button>
