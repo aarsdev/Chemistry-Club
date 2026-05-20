@@ -5,80 +5,84 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chemistry Club</title>
-
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header class="hero">
-    <h1>🧪 Chemistry Club</h1>
-    <p>Explore chemistry through experiments, quizzes, and interactive learning</p>
-  </header>
+<header class="hero">
+  <h1>🧪 Chemistry Club</h1>
+  <p>Learn chemistry through experiments, quizzes, and interactive challenges</p>
+</header>
 
-  <!-- MAIN -->
-  <main>
+<main>
 
-    <!-- FACT SECTION -->
-    <section class="card">
-      <h2>🔬 Random Chemistry Fact</h2>
+  <!-- FACTS -->
+  <section class="card">
+    <h2>🔬 Chemistry Facts</h2>
+    <p id="factBox">Loading fact...</p>
+  </section>
 
-      <button onclick="showFact()">Generate Fact</button>
+  <!-- QUIZ -->
+  <section class="card">
+    <h2>🧠 Chemistry Quiz</h2>
 
-      <p id="factBox">Click the button to learn something cool!</p>
-    </section>
+    <p id="question">Loading question...</p>
 
-    <!-- QUIZ SECTION -->
-    <section class="card">
-      <h2>🧠 Quick Quiz</h2>
+    <div class="button-row">
+      <button onclick="checkAnswer(0)">A</button>
+      <button onclick="checkAnswer(1)">B</button>
+      <button onclick="checkAnswer(2)">C</button>
+      <button onclick="checkAnswer(3)">D</button>
+    </div>
 
-      <p>What is H₂O?</p>
+    <p id="quizResult"></p>
+  </section>
 
-      <div class="button-row">
-        <button onclick="checkAnswer('wrong')">Oxygen</button>
-        <button onclick="checkAnswer('correct')">Water</button>
-        <button onclick="checkAnswer('wrong')">Hydrogen</button>
-      </div>
+  <!-- ACTIVITIES -->
+  <section class="card">
+    <h2>⚗️ Activities</h2>
 
-      <p id="quizResult"></p>
-    </section>
+    <div class="grid">
+      <div class="box">🧪 Virtual Experiments</div>
+      <div class="box">📊 Reaction Balancing</div>
+      <div class="box">🧠 Chemistry Puzzles</div>
+      <div class="box">🌡️ pH Challenges</div>
+      <div class="box">🔬 Molecule Building</div>
+      <div class="box">📚 Study Notes</div>
+    </div>
+  </section>
 
-    <!-- TOPICS -->
-    <section class="card">
-      <h2>📚 Topics You Will Learn</h2>
+  <!-- CREDITS -->
+  <section class="card">
+    <h2>⭐ Credits</h2>
 
-      <div class="grid">
-        <div class="box">Atoms & Molecules</div>
-        <div class="box">Chemical Reactions</div>
-        <div class="box">Acids & Bases</div>
-        <div class="box">Organic Chemistry</div>
-        <div class="box">Periodic Table</div>
-        <div class="box">Lab Safety</div>
-      </div>
-    </section>
+    <p>This Chemistry Club website was created for learning and collaboration.</p>
 
-    <!-- CREDITS -->
-    <section class="card">
-      <h2>⭐ Credits</h2>
+    <ul>
+      <li>👨‍💻 Developer: Aarush Balamurugan</li>
+    </ul>
 
-      <p>Built for South Brunswick High School Chemistry Club</p>
+    <h3>🤝 Helpers</h3>
 
-      <ul>
-        <li>👨‍💻 Developer: Aarush Balamurugan</li>
-        <li>🧪 Project: Chemistry Learning Club</li>
-        <li>🌐 Hosted on GitHub Pages</li>
-      </ul>
-    </section>
+    <ul>
+      <li>Abhijith Bandu</li>
+      <li>Heet Patel</li>
+      <li>Shriyans Samantha Goud</li>
+      <li>Avyaan Patel</li>
+      <li>Jimmy</li>
+    </ul>
 
-  </main>
+    <p>🌐 Hosted on GitHub Pages</p>
+  </section>
 
-  <footer>
-    <p>Made with ❤️ for science learners</p>
-  </footer>
+</main>
 
-  <script src="script.js"></script>
+<footer>
+  <p>Made with ❤️ for science learners</p>
+</footer>
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
