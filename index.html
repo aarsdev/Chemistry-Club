@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chemistry Learning Hub</title>
+  <title>Chemistry Hub</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,15 +12,15 @@
 
 <header class="hero">
   <h1>🧪 Chemistry Learning Hub</h1>
-  <p>Interactive chemistry learning platform</p>
+  <p>Learn chemistry with quizzes + AI assistant</p>
 </header>
 
 <main>
 
   <!-- FACTS -->
   <section class="card">
-    <h2>🔬 Chemistry Facts</h2>
-    <p id="factBox">Click refresh to see a fact</p>
+    <h2>🔬 Chemistry Fact</h2>
+    <p id="factBox"></p>
     <button onclick="showFact()">New Fact</button>
   </section>
 
@@ -28,64 +28,35 @@
   <section class="card">
     <h2>🧠 Quiz</h2>
 
-    <p id="question">Loading...</p>
+    <p id="question"></p>
 
-    <div id="options">
-      <button onclick="checkAnswer(0)">A</button>
-      <button onclick="checkAnswer(1)">B</button>
-      <button onclick="checkAnswer(2)">C</button>
-      <button onclick="checkAnswer(3)">D</button>
+    <div id="options" class="options">
+      <button onclick="checkAnswer(0)"></button>
+      <button onclick="checkAnswer(1)"></button>
+      <button onclick="checkAnswer(2)"></button>
+      <button onclick="checkAnswer(3)"></button>
     </div>
 
     <p id="quizResult"></p>
   </section>
 
-  <!-- ACTIVITIES -->
-  <section class="card">
-    <h2>⚗️ Activities</h2>
-
-    <div class="grid">
-      <div class="box">Virtual Experiments</div>
-      <div class="box">Reaction Balancing</div>
-      <div class="box">pH Practice</div>
-      <div class="box">Molecule Builder</div>
-      <div class="box">Study Notes</div>
-      <div class="box">Flashcards</div>
-    </div>
-  </section>
-
-  <!-- DIAGRAMS -->
-  <section class="card">
-    <h2>📊 Diagrams</h2>
-
-    <div class="grid">
-      <div class="diagram">Atom Structure</div>
-      <div class="diagram">Water Molecule</div>
-      <div class="diagram">pH Scale</div>
-      <div class="diagram">Periodic Table</div>
-    </div>
-  </section>
-
   <!-- CHATBOT -->
-  <section class="card">
-    <h2>🤖 Chemistry Bot</h2>
+  <section class="card chat-card">
+    <h2>🤖 Chemistry Chatbot</h2>
 
-    <input id="userInput" placeholder="Ask chemistry question..." />
-    <button onclick="askBot()">Ask</button>
+    <div id="chatBox"></div>
 
-    <p id="botReply"></p>
+    <div class="chat-input">
+      <input id="userInput" placeholder="Ask chemistry..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
   </section>
 
   <!-- CREDITS -->
-  <section class="card developer">
-
-    <h2>👨‍💻 Developer</h2>
+  <section class="card">
+    <h2>👨‍💻 Credits</h2>
 
     <div class="name">⭐ Aarush Balamurugan ⭐</div>
-
-    <p class="highlight">Lead Developer</p>
-
-    <h3>Helpers</h3>
 
     <ul>
       <li>Abhijith Bandu</li>
@@ -94,14 +65,9 @@
       <li>Avyaan Patel</li>
       <li>Jimmy</li>
     </ul>
-
   </section>
 
 </main>
-
-<footer>
-  <p>Made for learning chemistry ❤️</p>
-</footer>
 
 <script src="script.js"></script>
 
