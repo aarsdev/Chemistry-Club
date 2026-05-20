@@ -1,47 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chemistry Club</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <h1>Chemistry Club</h1>
+  <!-- HEADER -->
+  <header class="hero">
+    <h1>🧪 Chemistry Club</h1>
+    <p>Explore chemistry through experiments, quizzes, and interactive learning</p>
+  </header>
 
-  <p id="subtitle">
-    Learn chemistry in a fun way!
-  </p>
+  <!-- MAIN -->
+  <main>
 
-  <button onclick="showFact()">
-    Show Chemistry Fact
-  </button>
+    <!-- FACT SECTION -->
+    <section class="card">
+      <h2>🔬 Random Chemistry Fact</h2>
 
-  <h3 id="factBox"></h3>
+      <button onclick="showFact()">Generate Fact</button>
 
-  <hr>
+      <p id="factBox">Click the button to learn something cool!</p>
+    </section>
 
-  <h2>Quick Quiz</h2>
+    <!-- QUIZ SECTION -->
+    <section class="card">
+      <h2>🧠 Quick Quiz</h2>
 
-  <p>What is H2O?</p>
+      <p>What is H₂O?</p>
 
-  <button onclick="checkAnswer('wrong')">Oxygen</button>
-  <button onclick="checkAnswer('correct')">Water</button>
+      <div class="button-row">
+        <button onclick="checkAnswer('wrong')">Oxygen</button>
+        <button onclick="checkAnswer('correct')">Water</button>
+        <button onclick="checkAnswer('wrong')">Hydrogen</button>
+      </div>
 
-  <h3 id="quizResult"></h3>
+      <p id="quizResult"></p>
+    </section>
 
-  <hr>
+    <!-- TOPICS -->
+    <section class="card">
+      <h2>📚 Topics You Will Learn</h2>
 
-  <h2>Credits</h2>
+      <div class="grid">
+        <div class="box">Atoms & Molecules</div>
+        <div class="box">Chemical Reactions</div>
+        <div class="box">Acids & Bases</div>
+        <div class="box">Organic Chemistry</div>
+        <div class="box">Periodic Table</div>
+        <div class="box">Lab Safety</div>
+      </div>
+    </section>
 
-  <p>Built for South Brunswick High school Chemistryclub only.</p>
+    <!-- CREDITS -->
+    <section class="card">
+      <h2>⭐ Credits</h2>
 
-  <ul>
-    <li>👨‍💻 Developer: Aarush Balamurugan</li>
-    <li>🧪 Project: Chemistry Learning Club</li>
+      <p>Built for South Brunswick High School Chemistry Club</p>
 
-  </ul>
+      <ul>
+        <li>👨‍💻 Developer: Aarush Balamurugan</li>
+        <li>🧪 Project: Chemistry Learning Club</li>
+        <li>🌐 Hosted on GitHub Pages</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Made with ❤️ for science learners</p>
+  </footer>
 
   <script src="script.js"></script>
 
