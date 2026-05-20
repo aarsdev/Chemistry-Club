@@ -1,26 +1,24 @@
-// Chemistry facts
 const facts = [
   "Water is made of hydrogen and oxygen.",
   "Helium is lighter than air.",
-  "Gold is chemically stable.",
-  "Carbon is the basis of life.",
-  "Neon glows in lights.",
-  "Oxygen makes up about 21% of Earth's atmosphere."
+  "Carbon is the basis of all life.",
+  "Oxygen makes up 21% of Earth's atmosphere.",
+  "Neon lights glow when electrons get excited.",
+  "Gold is very unreactive chemically.",
+  "Salt is also known as sodium chloride (NaCl)."
 ];
 
-// Show random fact
+// RANDOM FACT
 function showFact() {
-  let randomIndex = Math.floor(Math.random() * facts.length);
-  document.getElementById("factBox").innerText = facts[randomIndex];
+  const random = Math.floor(Math.random() * facts.length);
+  document.getElementById("factBox").innerText = facts[random];
 }
 
-// Quiz system
+// QUIZ
 function checkAnswer(answer) {
-
   if (answer === "correct") {
-    document.getElementById("quizResult").innerText = "Correct! 🎉";
+    document.getElementById("quizResult").innerText = "Correct! 🎉 Great job!";
   } else {
-    document.getElementById("quizResult").innerText = "Try again ❌";
+    document.getElementById("quizResult").innerText = "Wrong ❌ Try again!";
   }
-
 }
