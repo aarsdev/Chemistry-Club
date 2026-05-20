@@ -12,7 +12,7 @@
 
 <header class="hero">
   <h1>🧪 Chemistry Learning Hub</h1>
-  <p>Interactive learning with quizzes, facts, diagrams & AI assistant</p>
+  <p>Interactive chemistry learning platform</p>
 </header>
 
 <main>
@@ -20,20 +20,21 @@
   <!-- FACTS -->
   <section class="card">
     <h2>🔬 Chemistry Facts</h2>
-    <p id="factBox">Loading facts...</p>
+    <p id="factBox">Click refresh to see a fact</p>
+    <button onclick="showFact()">New Fact</button>
   </section>
 
   <!-- QUIZ -->
   <section class="card">
-    <h2>🧠 Chemistry Quiz</h2>
+    <h2>🧠 Quiz</h2>
 
-    <p id="question">Loading question...</p>
+    <p id="question">Loading...</p>
 
-    <div id="options" class="button-grid">
-      <button onclick="checkAnswer(0)">Option</button>
-      <button onclick="checkAnswer(1)">Option</button>
-      <button onclick="checkAnswer(2)">Option</button>
-      <button onclick="checkAnswer(3)">Option</button>
+    <div id="options">
+      <button onclick="checkAnswer(0)">A</button>
+      <button onclick="checkAnswer(1)">B</button>
+      <button onclick="checkAnswer(2)">C</button>
+      <button onclick="checkAnswer(3)">D</button>
     </div>
 
     <p id="quizResult"></p>
@@ -44,12 +45,12 @@
     <h2>⚗️ Activities</h2>
 
     <div class="grid">
-      <div class="box">🧪 Virtual Experiments</div>
-      <div class="box">⚖️ Reaction Balancing</div>
-      <div class="box">🧠 Chemistry Puzzles</div>
-      <div class="box">🌡️ pH Challenges</div>
-      <div class="box">🔬 Molecule Builder</div>
-      <div class="box">📚 Study Notes</div>
+      <div class="box">Virtual Experiments</div>
+      <div class="box">Reaction Balancing</div>
+      <div class="box">pH Practice</div>
+      <div class="box">Molecule Builder</div>
+      <div class="box">Study Notes</div>
+      <div class="box">Flashcards</div>
     </div>
   </section>
 
@@ -58,50 +59,33 @@
     <h2>📊 Diagrams</h2>
 
     <div class="grid">
-      <div class="diagram">
-        <h3>Atom</h3>
-        <p>Nucleus + electrons</p>
-      </div>
-
-      <div class="diagram">
-        <h3>Water (H₂O)</h3>
-        <p>Bent molecular structure</p>
-      </div>
-
-      <div class="diagram">
-        <h3>pH Scale</h3>
-        <p>0 acid → 7 neutral → 14 base</p>
-      </div>
-
-      <div class="diagram">
-        <h3>Periodic Table</h3>
-        <p>118 elements organized</p>
-      </div>
+      <div class="diagram">Atom Structure</div>
+      <div class="diagram">Water Molecule</div>
+      <div class="diagram">pH Scale</div>
+      <div class="diagram">Periodic Table</div>
     </div>
   </section>
 
   <!-- CHATBOT -->
   <section class="card">
-    <h2>🤖 Chemistry AI Assistant</h2>
+    <h2>🤖 Chemistry Bot</h2>
 
-    <input id="userInput" placeholder="Ask a chemistry question..." />
+    <input id="userInput" placeholder="Ask chemistry question..." />
     <button onclick="askBot()">Ask</button>
 
     <p id="botReply"></p>
   </section>
 
   <!-- CREDITS -->
-  <section class="card developer-card">
+  <section class="card developer">
 
     <h2>👨‍💻 Developer</h2>
 
-    <div class="developer-name">
-      ⭐ Aarush Balamurugan ⭐
-    </div>
+    <div class="name">⭐ Aarush Balamurugan ⭐</div>
 
-    <p class="highlight">Lead Developer of Chemistry Learning Hub</p>
+    <p class="highlight">Lead Developer</p>
 
-    <h3>🤝 Helpers</h3>
+    <h3>Helpers</h3>
 
     <ul>
       <li>Abhijith Bandu</li>
@@ -111,14 +95,12 @@
       <li>Jimmy</li>
     </ul>
 
-    <p>🌐 Hosted on GitHub Pages</p>
-
   </section>
 
 </main>
 
 <footer>
-  <p>Made with ❤️ for science learners</p>
+  <p>Made for learning chemistry ❤️</p>
 </footer>
 
 <script src="script.js"></script>
