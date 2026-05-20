@@ -1,43 +1,132 @@
-body{
-  background:#0f172a;
-  color:white;
-  text-align:center;
-  font-family:Arial;
-  padding:30px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
 }
 
-button{
-  margin:10px;
-  padding:10px 15px;
-  border:none;
-  border-radius:8px;
-  cursor:pointer;
-  background:#38bdf8;
-  color:black;
-  font-weight:bold;
+body {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+  text-align: center;
 }
 
-#factBox{
-  color:cyan;
-  margin-top:20px;
+/* HERO */
+.hero {
+  padding: 60px 20px;
 }
 
-#quizResult{
-  color:lightgreen;
-  margin-top:15px;
+.hero h1 {
+  font-size: 3.2rem;
+  color: #38bdf8;
+  animation: fadeIn 1s ease-in-out;
 }
 
-ul{
-  list-style:none;
-  padding:0;
+.hero p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #cbd5e1;
 }
 
-li{
-  margin:5px 0;
-  color:#38bdf8;
+/* CARDS */
+.card {
+  background: rgba(255,255,255,0.06);
+  margin: 25px auto;
+  padding: 25px;
+  width: 90%;
+  max-width: 700px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: 0.3s;
+  animation: fadeInUp 0.8s ease;
 }
 
-hr{
-  margin:40px 0;
-  border:1px solid #334155;
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* BUTTONS */
+button {
+  margin: 10px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #38bdf8;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #0ea5e9;
+  transform: scale(1.05);
+}
+
+/* FACT + QUIZ TEXT */
+#factBox {
+  margin-top: 15px;
+  color: #7dd3fc;
+  font-weight: bold;
+}
+
+#quizResult {
+  margin-top: 10px;
+  color: #4ade80;
+  font-weight: bold;
+}
+
+/* GRID TOPICS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.box {
+  background: rgba(56,189,248,0.1);
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(56,189,248,0.3);
+  transition: 0.3s;
+}
+
+.box:hover {
+  transform: scale(1.05);
+}
+
+/* LIST */
+ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+li {
+  padding: 5px;
+  color: #93c5fd;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  color: #94a3b8;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
