@@ -1,14 +1,13 @@
-
 // FACTS
 const facts = [
   "Water is H2O.",
-  "Carbon is life basis.",
-  "Oxygen supports fire.",
-  "Helium is lighter than air.",
-  "Neon glows in lights."
+  "Carbon is basis of life.",
+  "Oxygen supports combustion.",
+  "Atoms are extremely small.",
+  "Neon glows in signs."
 ];
 
-// QUIZ
+// QUIZ (FIXED)
 const quiz = [
   {
     q: "What is H2O?",
@@ -34,12 +33,12 @@ function showFact() {
   document.getElementById("factBox").innerText =
     facts[Math.floor(Math.random() * facts.length)];
 }
-
 showFact();
 
-// QUIZ
+// QUIZ (FIXED — THIS IS THE IMPORTANT PART)
 function loadQuiz() {
   const q = quiz[current];
+
   document.getElementById("question").innerText = q.q;
 
   const buttons = document.querySelectorAll("#options button");
@@ -50,31 +49,48 @@ function loadQuiz() {
 }
 
 function checkAnswer(i) {
+  const result = document.getElementById("quizResult");
+
   if (i === quiz[current].answer) {
-    document.getElementById("quizResult").innerText = "Correct! 🎉";
+    result.innerText = "Correct! 🎉";
   } else {
-    document.getElementById("quizResult").innerText = "Wrong ❌";
+    result.innerText = "Wrong ❌";
   }
 
   current = (current + 1) % quiz.length;
+
   setTimeout(() => {
-    document.getElementById("quizResult").innerText = "";
+    result.innerText = "";
     loadQuiz();
   }, 1000);
 }
 
 loadQuiz();
 
-// CHATBOT
-function askBot() {
-  const input = document.getElementById("userInput").value.toLowerCase();
+// 🤖 REAL CHATBOT (CHAT STYLE)
+function sendMessage() {
+  const input = document.getElementById("userInput");
+  const chatBox = document.getElementById("chatBox");
+
+  const text = input.value.trim().toLowerCase();
+  if (!text) return;
+
+  // user message
+  chatBox.innerHTML += `<div class="msg user">You: ${text}</div>`;
+
   let reply = "";
 
-  if (input.includes("water")) reply = "H2O is water.";
-  else if (input.includes("atom")) reply = "Atom is smallest unit of matter.";
-  else if (input.includes("acid")) reply = "Acids have pH < 7.";
-  else if (input.includes("base")) reply = "Bases have pH > 7.";
-  else reply = "Ask about atoms, water, acids, or carbon.";
+  if (text.includes("water")) reply = "Water is H2O.";
+  else if (text.includes("atom")) reply = "Atoms are the smallest unit of matter.";
+  else if (text.includes("acid")) reply = "Acids have pH below 7.";
+  else if (text.includes("base")) reply = "Bases have pH above 7.";
+  else if (text.includes("carbon")) reply = "Carbon is the basis of life.";
+  else reply = "Ask me about atoms, acids, bases, or water.";
 
-  document.getElementById("botReply").innerText = reply;
+  // bot message
+  chatBox.innerHTML += `<div class="msg bot">Bot: ${reply}</div>`;
+
+  input.value = "";
+
+  chatBox.scrollTop = chatBox.scrollHeight;
 }
