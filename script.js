@@ -12,7 +12,7 @@ const facts = [
 // QUIZ
 const quiz = [
   {
-    q: "What is atomic number of Carbon?",
+    q: "Atomic number of Carbon?",
     options: ["2", "4", "6", "8"],
     answer: 2
   },
@@ -35,7 +35,7 @@ const quiz = [
 
 let current = 0;
 
-// FACT SYSTEM
+/* FACT SYSTEM */
 function showFact() {
   const random = Math.floor(Math.random() * facts.length);
   document.getElementById("factBox").innerText = facts[random];
@@ -44,12 +44,12 @@ function showFact() {
 setInterval(showFact, 4000);
 showFact();
 
-// QUIZ
+/* QUIZ SYSTEM (FIXED) */
 function loadQuestion() {
   const q = quiz[current];
   document.getElementById("question").innerText = q.q;
 
-  const buttons = document.querySelectorAll(".button-grid button");
+  const buttons = document.querySelectorAll("#options button");
 
   buttons.forEach((btn, i) => {
     btn.innerText = q.options[i];
@@ -73,29 +73,51 @@ function checkAnswer(index) {
 
 loadQuestion();
 
-// AI BOT (CHEMISTRY CHATBOT)
+/* CHATBOT */
 function askBot() {
-  let input = document.getElementById("userInput").value.toLowerCase();
-  let reply = "";
+  const input = document.getElementById("userInput").value.toLowerCase().trim();
+  const output = document.getElementById("botReply");
 
-  if (input.includes("water")) {
-    reply = "Water is H₂O made of hydrogen and oxygen.";
-  }
-  else if (input.includes("atom")) {
-    reply = "An atom is the smallest unit of matter.";
-  }
-  else if (input.includes("acid")) {
-    reply = "Acids have pH less than 7 and release H⁺ ions.";
-  }
-  else if (input.includes("base")) {
-    reply = "Bases have pH greater than 7.";
-  }
-  else if (input.includes("carbon")) {
-    reply = "Carbon is the basis of all organic life.";
-  }
-  else {
-    reply = "I don't know that yet — try asking about atoms, acids, water, or carbon.";
+  if (!input) {
+    output.innerText = "Please ask something.";
+    return;
   }
 
-  document.getElementById("botReply").innerText = reply;
+  const responses = [
+    {
+      keys: ["water", "h2o"],
+      reply: "💧 Water is H₂O made of hydrogen and oxygen."
+    },
+    {
+      keys: ["atom"],
+      reply: "⚛️ Atoms are the smallest units of matter."
+    },
+    {
+      keys: ["acid"],
+      reply: "🧪 Acids have pH less than 7."
+    },
+    {
+      keys: ["base"],
+      reply: "⚗️ Bases have pH greater than 7."
+    },
+    {
+      keys: ["carbon"],
+      reply: "🧬 Carbon is the backbone of life."
+    },
+    {
+      keys: ["periodic"],
+      reply: "📊 The periodic table organizes 118 elements."
+    }
+  ];
+
+  for (let item of responses) {
+    for (let k of item.keys) {
+      if (input.includes(k)) {
+        output.innerText = item.reply;
+        return;
+      }
+    }
+  }
+
+  output.innerText = "🤖 Try asking about atoms, acids, water, carbon, or periodic table.";
 }
