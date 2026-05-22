@@ -1,13 +1,14 @@
+
 // FACTS
 const facts = [
   "Water is H2O.",
-  "Carbon is basis of life.",
+  "Carbon is the basis of life.",
   "Oxygen supports combustion.",
   "Atoms are extremely small.",
-  "Neon glows in signs."
+  "Neon lights glow due to electrons."
 ];
 
-// QUIZ (FIXED)
+// QUIZ
 const quiz = [
   {
     q: "What is H2O?",
@@ -23,6 +24,11 @@ const quiz = [
     q: "pH of neutral water?",
     options: ["5", "7", "10", "14"],
     answer: 1
+  },
+  {
+    q: "Which is a noble gas?",
+    options: ["Oxygen", "Neon", "Hydrogen", "Carbon"],
+    answer: 1
   }
 ];
 
@@ -33,12 +39,12 @@ function showFact() {
   document.getElementById("factBox").innerText =
     facts[Math.floor(Math.random() * facts.length)];
 }
+
 showFact();
 
-// QUIZ (FIXED — THIS IS THE IMPORTANT PART)
+// QUIZ FIXED
 function loadQuiz() {
   const q = quiz[current];
-
   document.getElementById("question").innerText = q.q;
 
   const buttons = document.querySelectorAll("#options button");
@@ -67,7 +73,7 @@ function checkAnswer(i) {
 
 loadQuiz();
 
-// 🤖 REAL CHATBOT (CHAT STYLE)
+// CHATBOT
 function sendMessage() {
   const input = document.getElementById("userInput");
   const chatBox = document.getElementById("chatBox");
@@ -75,7 +81,6 @@ function sendMessage() {
   const text = input.value.trim().toLowerCase();
   if (!text) return;
 
-  // user message
   chatBox.innerHTML += `<div class="msg user">You: ${text}</div>`;
 
   let reply = "";
@@ -85,9 +90,8 @@ function sendMessage() {
   else if (text.includes("acid")) reply = "Acids have pH below 7.";
   else if (text.includes("base")) reply = "Bases have pH above 7.";
   else if (text.includes("carbon")) reply = "Carbon is the basis of life.";
-  else reply = "Ask me about atoms, acids, bases, or water.";
+  else reply = "Ask about atoms, water, acids, bases, or carbon.";
 
-  // bot message
   chatBox.innerHTML += `<div class="msg bot">Bot: ${reply}</div>`;
 
   input.value = "";
